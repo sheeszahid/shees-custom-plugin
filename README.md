@@ -16,8 +16,8 @@ It adds a REST API endpoint, a WP-CLI command, and an admin page for easier mana
 4. After installation, click **Activate Plugin**.
 
 ## Usage
-- **REST API**: Available under `/wp-json/` (see plugin code for exact endpoint).  
-- **CLI Command**: Run with `wp shees-custom-plugin` from the terminal.  
+- **REST API**: Available under `wp-json/sheescustom/v1/data`.  
+- **CLI Command**: Run with `wp shees-custom-plugin refresh-data` from the terminal.  
 - **Admin Page**: Find it in the WordPress dashboard under **Settings → Custom Plugin**.
 
 ## Requirements
