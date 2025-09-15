@@ -22,7 +22,7 @@ class DataHandler {
 		if($check_data !== false){ // false means transient does not exsist( or expired )
 			return $check_data;
 		}
-
+		
 		$args = array(
 		    'timeout'     => 10
 		);
@@ -51,8 +51,10 @@ class DataHandler {
 		        error_log("Failed to decode JSON");
 		    }
 		}
+
 		
 		return false;
+
 	}
 
 	public function resetData(){
