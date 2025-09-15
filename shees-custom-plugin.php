@@ -15,6 +15,7 @@ require __DIR__ . '/vendor/autoload.php';
 use SheesPlugin\DataHandler;
 use SheesPlugin\AdminPage;
 use SheesPlugin\RestAPI;
+use SheesPlugin\CLI;
 
 function shees_cstuom_plugin_loaded_hook() {
     //$data = (new DataHandler())->getData();
@@ -22,6 +23,10 @@ function shees_cstuom_plugin_loaded_hook() {
     new DataHandler();
     new AdminPage();
     new RestAPI();
+    if( defined( 'WP_CLI' ) && WP_CLI ) {
+        new CLI();
+    }
+
 }
 
 add_action( 'plugins_loaded', 'shees_cstuom_plugin_loaded_hook' );
