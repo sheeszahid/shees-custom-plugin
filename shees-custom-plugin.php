@@ -14,12 +14,14 @@ require __DIR__ . '/vendor/autoload.php';
 
 use SheesPlugin\DataHandler;
 use SheesPlugin\AdminPage;
+use SheesPlugin\RestAPI;
 
 function shees_cstuom_plugin_loaded_hook() {
     //$data = (new DataHandler())->getData();
     
     new DataHandler();
     new AdminPage();
+    new RestAPI();
 }
 
 add_action( 'plugins_loaded', 'shees_cstuom_plugin_loaded_hook' );
